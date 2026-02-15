@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ABsportswear - Custom apparel for sports. Providing premium custom jerseys and sports wear in Bacolod City since 2011. Get your custom-jersey estimate today!"
+    />
+    <meta
+      name="keywords"
+      content="custom jersey, sports apparel, Bacolod City, custom-jersey, apparel company, sports wear Philippines, Negros, jersey Bacolod, custom apparel"
+    />
+    <meta name="author" content="ABsportswear" />
+    <meta
+      property="og:title"
+      content="ABsportswear - Custom Jersey & Sports Apparel"
+    />
+    <meta
+      property="og:description"
+      content="Premium custom apparel for sports since 2011. Bacolod City based. Get your custom jersey estimate now!"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ABsportswear - Custom Jersey & Sports Apparel | Bacolod City</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">ABsportswear</div>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+          <li>
+            <a href="#portfolio" class="nav-link" data-section="portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#calculator" class="nav-link" data-section="calculator"
+              >Estimate Calculation</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- HOME SECTION -->
+      <section id="home" class="section home-section active">
+        <div class="section-content">
+          <div class="home-header">
+            <img
+              src="images/logo.jpg"
+              alt="ABsportswear Logo"
+              class="logo-img"
+            />
+            <h1>ABsportswear</h1>
+            <p class="tagline">Custom Apparel for Sports</p>
+          </div>
+
+          <div class="info-box">
+            <p class="info-text">Based in <strong>Bacolod City</strong></p>
+            <p class="info-text">
+              Premium Custom Apparel Since <strong>2011</strong>
+            </p>
+            <p class="info-text">
+              Trusted by teams and businesses across the Philippines
+            </p>
+          </div>
+
+          <!-- Client Carousel -->
+          <div class="carousel-container">
+            <h2>Our Clients</h2>
+            <div class="carousel-wrapper">
+              <button class="carousel-btn carousel-btn-prev" id="carouselPrev">
+                ❮
+              </button>
+              <div class="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                  <!-- Images will be loaded dynamically -->
+                </div>
+              </div>
+              <button class="carousel-btn carousel-btn-next" id="carouselNext">
+                ❯
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio" class="section portfolio-section">
+        <div class="section-content">
+          <h2>Our Portfolio</h2>
+          <p class="section-subtitle">
+            Gallery of custom apparel we've created
+          </p>
+
+          <div class="gallery-container">
+            <div class="gallery-frame">
+              <img
+                id="galleryImage"
+                src=""
+                alt="Gallery"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-controls">
+              <button class="gallery-btn" id="galleryPrev">Previous</button>
+              <div class="gallery-counter">
+                <span id="currentSlide">1</span> /
+                <span id="totalSlides">0</span>
+              </div>
+              <button class="gallery-btn" id="galleryNext">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESTIMATE CALCULATION SECTION -->
+      <section id="calculator" class="section calculator-section">
+        <div class="section-content">
+          <h2>Estimate Calculation</h2>
+          <p class="section-subtitle">
+            Get a quick price estimate for your custom apparel
+          </p>
+
+          <div class="calculator-container">
+            <form id="calculatorForm">
+              <div class="calc-group">
+                <label for="quantity">Number of Pieces</label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  value="1"
+                  required
+                />
+                <small class="promo-info"
+                  >Free 1 piece per every 15 pieces purchased</small
+                >
+              </div>
+
+              <div class="calc-group">
+                <label for="apparel-type">Apparel Type</label>
+                <select id="apparel-type" name="apparel-type" required>
+                  <option value="jersey">
+                    Jersey (Upper Shirt Only) - ₱350
+                  </option>
+                  <option value="full-set">
+                    Full Set (Jersey + Shorts) - ₱500
+                  </option>
+                </select>
+              </div>
+
+              <div class="calc-group">
+                <label for="location">Shipping Location</label>
+                <select id="location" name="location" required>
+                  <option value="bacolod">Bacolod City - ₱200</option>
+                  <option value="negros">Within Negros - ₱400</option>
+                  <option value="outside">Outside Negros - ₱500</option>
+                </select>
+              </div>
+
+              <div class="estimate-result">
+                <div class="result-item">
+                  <span>Unit Price:</span>
+                  <span id="unitPrice">₱350</span>
+                </div>
+                <div class="result-item">
+                  <span>Subtotal:</span>
+                  <span id="subtotal">₱350</span>
+                </div>
+                <div class="result-item">
+                  <span>Free Pieces:</span>
+                  <span id="freePieces">0</span>
+                </div>
+                <div class="result-item">
+                  <span>Shipping:</span>
+                  <span id="shipping">₱200</span>
+                </div>
+                <div class="result-item total">
+                  <span>Total Estimate:</span>
+                  <span id="totalEstimate">₱550</span>
+                </div>
+              </div>
+
+              <button type="button" class="estimate-btn" id="inquireBtn">
+                Inquire Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section contact-section">
+        <div class="section-content">
+          <h2>Get In Touch</h2>
+          <p class="section-subtitle">
+            Have questions? We'd love to hear from you
+          </p>
+
+          <div class="form-container">
+            <div class="form-wrapper">
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="company">Company/Team Name</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Your company or team name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="Your phone number"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Your email address"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiry">Inquiry Message *</label>
+                  <textarea
+                    id="inquiry"
+                    name="inquiry"
+                    required
+                    placeholder="Tell us about your custom apparel needs"
+                    rows="5"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Absortswear. All rights reserved.</p>
+        <p>Premium Custom Apparel Since 2011 | Bacolod City, Philippines</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
